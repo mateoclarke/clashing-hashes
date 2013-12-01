@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Sinatra Lesson</title>
+            <link rel="stylesheet" href="application.css" type="text/css" />
+        </head>
+        <body>
+        	<h1>Welcome to <%= @name %>'s Twitter Clash App</h1>
+        	<% if @show_description %>
+
+	        	<p>Below, enter in two #hashes to compare results!</p>
+
+        	<% end %>
+
+        	<form action="/twitter" method="post">
+    	        First Hash: <input type="text" name="first"/><br/>
+    	        Second Hash: <input type="text" name="second"/><br/>
+    	        <input type="submit"/></p>
+        	</form>
+
+        </body>
+    </html>

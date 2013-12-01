@@ -4,5 +4,13 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  'hello world'
+	@name = "Mateo" 
+	@show_description = true
+	erb :index
+end
+
+post '/twitter' do
+	@first = params[:first]
+	@second = params[:second]
+	erb :twitter_results
 end
